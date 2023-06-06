@@ -150,7 +150,12 @@ populateStudentInfo(studentInformation)
  * This function should add a headers row to the report card table
  */
 function addReportCardHeaders(reportCardTableElement) {
-  // update the code here
+  // Now, let's update the addReportCardHeaders function to display 
+  // headers for the course code, name, semester, credits, letter, and points. 
+  // You should inject the following HTML elements:
+  // - A new div section with a class name table-header
+  // - Inside the new div section, add h4 headers containing the report card header titles.
+
   reportCardTableElement.innerHTML += ``
 }
 
@@ -163,6 +168,13 @@ function addReportCardHeaders(reportCardTableElement) {
  */
 function addCourseRowToReportCard(reportCardTableElement, course, rowNum) {
   // update the code here with information about the course passed to this function
+
+  // This function will add a single course's information to the report card. You should inject the following HTML elements:
+  // - A new div section with a class name table-row.
+  // - Inside the new div section, add h4 headers containing expressions that access the 
+  // course's code, name, semester, credits, and letter. Each header should contain the class 
+  // names code-col, name-col, sem-col, cred-col, and let-col, respectively.
+
   reportCardTableElement.innerHTML += `
   <div class="table-row course-row row-${rowNum + 1} ${rowNum % 2 === 1 ? "odd" : "even"}">
 
@@ -196,7 +208,12 @@ function updateReportCard(reportCardTableElement, currentSemester) {
   // reset the report card table's inner html to an empty string
   if (reportCardTableElement) reportCardTableElement.innerHTML = ``
 
-  // add your code here
+  // add a call to the addReportCardHeaders function by passing the parameter 
+  // reportCardTableElement as its argument.
+
+  // add a call to the addCourseRowToReportCard function. For now, call the function 
+  // with the first course in the current semester.
+
 }
 
 /**
@@ -281,4 +298,9 @@ function calculateSemesterGpa(reportCardTableElement) {
 
 window.onload = function () {
   // execute your functions here to make sure they run as soon as the page loads
+
+  // add a call to the updateReportCard function with 
+  // the report card table element and the semester variable as arguments. The semester 
+  // variable represents the current semester.
+
 }

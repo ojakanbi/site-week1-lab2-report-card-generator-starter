@@ -15,7 +15,7 @@ const studentInformation = {
   advisor: "Ryan Warnock",
   major: "Computer Science",
   graduationYear: "2025",
-  imageUrl: "ADD_A_URL_TO_ANY_IMAGE_HERE",
+  imageUrl: "codepath-img.png",
 }
 
 
@@ -126,7 +126,8 @@ function updateStudentGraduationYear(graduationYear) {
  * @param {String} url - a link to an image
  */
 function updateStudentImage(imageUrl) {
-  // code goes here
+  const imgField = document.getElementById("student-image")
+  imgField.src = imageUrl
 }
 
 /**

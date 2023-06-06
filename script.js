@@ -10,13 +10,14 @@ By the end of the lab, all tests in the report should be passing.
 */
 
 const studentInformation = {
-  name: "FILL_IN_YOUR_NAME_HERE",
-  grade: "FILL_IN_YOUR_GRADE_HERE",
-  advisor: "FILL_IN_YOUR_ADVISOR_HERE",
-  major: "FILL_IN_YOUR_MAJOR_HERE",
-  graduationYear: "FILL_IN_YOUR_GRADUATION_YEAR_HERE",
+  name: "Pierre Johnson",
+  grade: "Junior",
+  advisor: "Ryan Warnock",
+  major: "Computer Science",
+  graduationYear: "2025",
   imageUrl: "ADD_A_URL_TO_ANY_IMAGE_HERE",
 }
+
 
 let semester = "Spring Semester"
 
@@ -70,9 +71,14 @@ const dropdownEl = document.querySelector(".dropdown")
  *
  * @param {String} studentName - the name of the student
  */
+
+
 function updateStudentName(studentName) {
-  // code goes here
+  const nameField = document.getElementById("student-name");
+  nameField.innerText = studentName;
 }
+
+
 
 /**
  * Modify the report card to display the correct grade level from the lookup table above.
@@ -80,7 +86,8 @@ function updateStudentName(studentName) {
  * @param {String|Number} studentGradeLevel - the grade level of the student
  */
 function updateStudentGradeLevel(studentGradeLevel) {
-  // code goes here
+  const gradeField = document.getElementById("student-grade-level")
+  gradeField.innerText = studentGradeLevel 
 }
 
 /**
@@ -89,7 +96,8 @@ function updateStudentGradeLevel(studentGradeLevel) {
  * @param {String} studentAdvisor - the advisor of the student
  */
 function updateStudentAdvisor(studentAdvisor) {
-  // code goes here
+  const advisorField = document.getElementById("student-advisor")
+  advisorField.innerText = studentAdvisor
 }
 
 /**
@@ -98,10 +106,11 @@ function updateStudentAdvisor(studentAdvisor) {
  * @param {String} studentMajor - the major of the student
  */
 function updateMajor(studentMajor) {
-  // code goes here
+  const advisorField = document.getElementById("student-major")
+  advisorField.innerText = studentMajor
 }
 
-/**
+/**s
  * Modify the report card to display the correct graduation year from the lookup table above
  *
  * @param {Number} graduationyear - the year the student graduates
@@ -132,6 +141,7 @@ function populateStudentInfo(studentInformationObject) {
   updateStudentImage(studentInformationObject.imageUrl)
 }
 
+populateStudentInfo(studentInformation)
 /**
  * SOLUTION FOR INNER HTML DOM UPDATES
  */
